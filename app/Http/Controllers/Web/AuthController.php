@@ -53,7 +53,7 @@ class AuthController extends Controller
         {
             return response()->json([
                 'alert' => 'success',
-                'message' => 'Selamat datang '. Auth::guard('web')->user()->nama,
+                'message' => 'Selamat datang '. Auth::guard('web')->user()->name,
                 'callback' => 'reload',
             ]);
         }else{
@@ -112,7 +112,7 @@ class AuthController extends Controller
         Notification::send($data, new RegistrationNotification($data,$token,$pass));
         return response()->json([
             'alert' => 'success',
-            'message' => 'Akun berhasil terdaftar, harap menunggu verifikasi admin',
+            'message' => 'Akun berhasil terdaftar, harap verifikasi email Anda',
             'callback' => 'page_login',
         ]);
     }
@@ -135,10 +135,16 @@ class AuthController extends Controller
             }
         }
         // dd($token);
-        // return redirect()->route('web.auth.index')->with('message', $message);
+        return redirect()->route('web.auth.index')->with('message', $message);
+    }
+    public function verification()
+    {
+        return view('page.web.notice.main');
     }
     public function do_logout()
     {
-        // 
+        $user = Auth::guard('web')->user();
+        Auth::logout($user);
+        return redirect()->route('web.auth.index');
     }
 }

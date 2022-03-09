@@ -24,10 +24,10 @@ class UserSeeder extends Seeder
                 'email' => 'admin@pu.go.id',
                 'email_verified_at' => date("Y-m-d H:i:s"),
                 'password' => Hash::make('password'),
-                'country_id' => 1,
-                'province_id' => 32,
-                'city_id' => 73,
-                'address' => 'Jakarta',
+                'country_id' => 102,
+                'province_id' => 11,
+                'city_id' => 159,
+                'address' => 'Jl. Pattimura No. 20 Kebayoran Baru Jakarta Selatan 12110',
                 'role' => 1,
                 'st' => 'a',
 
@@ -46,6 +46,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => $u['email_verified_at'],
                 'role' => $u['role'],
                 'password' => $u['password'],
+                'st' => $u['st'],
 
             ]);
         }

@@ -6,8 +6,8 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo" class="me-lg-10">
-                    <a href="index.html" class="standard-logo d-none" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-                    <a href="index.html" class="retina-logo d-none" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+                    <a href="index.html" class="standard-logo" data-dark-logo="{{asset('head.png')}}"><img src="{{asset('head.png')}}" alt="Kementerian Pekerjaan Umum dan Perumahan Rakyat"></a>
+                    <a href="index.html" class="retina-logo" data-dark-logo="{{asset('head.png')}}"><img src="{{asset('head.png')}}" alt="Kementerian Pekerjaan Umum dan Perumahan Rakyat"></a>
                 </div>
                 <!-- #logo end -->
 
