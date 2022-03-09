@@ -186,7 +186,7 @@ return [
     /*
      * Do you wish to log the user agent?
      */
-    'log_user_agents' => false,
+    'log_user_agents' => true,
 
     /*
      * Do you wish to log your users?
@@ -211,7 +211,7 @@ return [
     /*
      * Do you wish to log url paths?
      */
-    'log_paths' => false,
+    'log_paths' => true,
 
     /*
      * Do you wish to log url queries and query arguments?
@@ -221,7 +221,7 @@ return [
     /*
      * Do you wish to log routes and route parameters?
      */
-    'log_routes' => false,
+    'log_routes' => true,
 
     /*
      * Log errors and exceptions?
@@ -237,12 +237,12 @@ return [
     /*
      * If you are storing cookies, you better change it to a name you of your own.
      */
-    'tracker_cookie_name' => 'please_change_this_cookie_name',
+    'tracker_cookie_name' => 'sayembara_ikn',
 
     /*
      * Internal tracker session name.
      */
-    'tracker_session_name' => 'tracker_session',
+    'tracker_session_name' => 'tracker_session_sayembara_ikn',
 
     /*
      * ** IMPORTANT **
@@ -314,7 +314,7 @@ return [
      */
     'authentication_ioc_binding' => ['auth'], // defaults to 'auth' in Illuminate\Support\Facades\Auth
 
-    'authentication_guards' => [], // defaults to []
+    'authentication_guards' => ['web'], // defaults to []
 
     'authenticated_check_method' => 'check', // to Auth::check()
 
@@ -322,7 +322,7 @@ return [
 
     'authenticated_user_id_column' => 'id', // to Auth::user()->id
 
-    'authenticated_user_username_column' => 'email', // to Auth::user()->email
+    'authenticated_user_username_column' => 'username', // to Auth::user()->email
 
     /*
      * Enable the Stats Panel?
